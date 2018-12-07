@@ -390,8 +390,8 @@ volStorageBackendRBDRefreshVolInfo(virStorageVolDefPtr vol,
                   "Querying for actual allocation",
                   def->source.name, vol->name);
 
-        if (virStorageBackendRBDSetAllocation(vol, image, &info) < 0)
-            goto cleanup;
+/*        if (virStorageBackendRBDSetAllocation(vol, image, &info) < 0)
+            goto cleanup;*/
     } else {
         vol->target.allocation = info.obj_size * info.num_objs;
     }
